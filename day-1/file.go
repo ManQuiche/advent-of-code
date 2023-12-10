@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func LoadFromFile(file string) (CalibrationValues, error) {
+func loadFromFile(file string) (CalibrationValues, error) {
 	values, err := os.ReadFile(file)
 	if err != nil {
 		return CalibrationValues{}, fmt.Errorf("could not load values: %w", err)
